@@ -67,7 +67,7 @@ function Header() {
           <li>
             <Link
               to="/"
-              className="hover:text-color-green ease-in duration-200 text-xl  font-semibold"
+              className="hover:text-[#1C1572]  text-xl  font-semibold"
             >
               Home
             </Link>
@@ -75,7 +75,7 @@ function Header() {
           <li>
             <Link
               to="/about"
-              className="hover:text-color-green ease-in duration-200 text-xl font-semibold"
+              className="hover:text-[#1C1572] text-xl font-semibold"
             >
               About
             </Link>
@@ -83,10 +83,10 @@ function Header() {
           <li>
             <Link
               to="/cart"
-              className="hover:text-color-green ease-in duration-200 text-xl font-semibold"
+              className=" text-xl font-semibold "
             >
               {" "}
-              <FaShoppingCart/>-{cartitem.length}
+              <FaShoppingCart className=""/>-{cartitem.length}
             </Link>
           </li>
         </ul>
@@ -95,6 +95,7 @@ function Header() {
       <div className="md:hidden">
  <button className="pl-1" onClick={getLocation}><MdLocationOn className="text-3xl "/></button>
  <p>{status}</p>
+ 
       </div>
       <div
         id="hamburger"
@@ -105,6 +106,7 @@ function Header() {
           {open?(<HiMiniBars3/>):(<RxCross1/>)}
         </button>
       </div>
+      
       <div
         id="menu"
         className={`md:hidden bg-blue-100 min-h-[100vh] right-0 top-[8%] w-full flex items-center absolute inset-0 px-10 z-50 ${
