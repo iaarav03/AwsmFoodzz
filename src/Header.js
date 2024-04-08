@@ -92,6 +92,10 @@ function Header() {
         </ul>
       </div>
       {/* Short Screen */}
+      <div className="md:hidden">
+ <button className="pl-1" onClick={getLocation}><MdLocationOn className="text-3xl "/></button>
+ <p>{status}</p>
+      </div>
       <div
         id="hamburger"
         className="md:hidden cursor-pointer z-50"
@@ -108,6 +112,9 @@ function Header() {
         }`}
       >
         <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 py-10">
+         
+       
+        
           <li>
             <Link
               to="/"
