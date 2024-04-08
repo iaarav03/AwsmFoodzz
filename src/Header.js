@@ -4,17 +4,49 @@ import { Link } from "react-router-dom";
 import { FaShoppingCart } from 'react-icons/fa';
 import { HiMiniBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
+import { MdLocationOn } from "react-icons/md";
+import { useContext } from "react";
+import UserContext from "./UseContext";
 
 function Header() {
   const [modalOpen, setModalOpen] = useState(false);
   const[open,setOpen]=useState(true);
+  const [status, setStatus] = useState(null);
+  const[loading,setLoading]=useState(true);
   const cartitem = useSelector((store) => store.cart.items);
-
+ const {user,setUser}=useContext(UserContext);
   const toggleModal = () => {
     setModalOpen(!modalOpen);
     setOpen(!open)
   };
-
+  const getLocation = () => {
+    if (!navigator.geolocation) {
+      setStatus('Geolocation is not supported by your browser');
+    } else {
+      setStatus('Locating...');
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const newLat = position.coords.latitude;
+          const newLng = position.coords.longitude;
+         
+          setUser(
+            {user:{
+            lat:newLat,
+            lng:newLng
+          }})
+          console.log(user);
+        
+          setStatus('');
+         
+          // Call getRestaurants here after location is updated
+           // Make sure this function can handle the asynchronous setting of lat and lng
+        },
+        () => {
+          setStatus('Please Grant Permission');
+        }
+      );
+    }
+  };
   return (
     <nav className=" z-50 flex justify-between items-center ">
       <div className="w-20 py-5 font-bold text-3xl px-10">
@@ -22,9 +54,16 @@ function Header() {
           <span className="text-[#1C1572]">AwsmFoodz</span>
           
         </Link>
+       
       </div>
       <div>
         <ul className="hidden md:flex items-center space-x-16 px-64">
+        
+        <div>
+ <button className="pl-1" onClick={getLocation}><MdLocationOn className="text-3xl "/></button>
+ <p>{status}</p>
+      </div>
+        
           <li>
             <Link
               to="/"

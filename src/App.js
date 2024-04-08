@@ -17,8 +17,8 @@ import { useState } from "react";
 const AppLayout=()=>{
  const [user,setUser]=useState({
   user:{
-    lat:null,
-    lng:null
+    lat:26.9124336,
+    lng:75.7872709
   }
  })
 
