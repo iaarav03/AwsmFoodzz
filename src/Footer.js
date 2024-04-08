@@ -9,7 +9,7 @@ const Footer = () => {
           aria-label="footer"
           className="focus:outline-none mx-auto container flex flex-col items-center justify-center"
         >
-          <div className=" flex flex-col md:items-center f-f-l pt-3">
+          <div className=" flex flex-col md:items-center f-f-l mt-16">
             <div className=" font-bold text-3xl ">
               <span className="text-[#1C1572]">AwsmFoodz</span>
             </div>

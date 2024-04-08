@@ -21,7 +21,7 @@ const RestaurantCard = ({
 
       <div className="flex flex-col mt-3">
         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
-        <p className="text-gray-600 text-sm">{cuisines.join(", ")}</p>
+        <p className="text-gray-600 text-sm hidden md:block">{cuisines.join(", ")}</p>
         <p className="text-gray-600 text-xs mt-1">{areaName}</p>
         <div className="flex items-center mt-2">
           <h4 className="text-sm text-gray-600">•</h4>
