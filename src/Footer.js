@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-[#1C1572]">AwsmFoodz</span>
             </div>
             <div className="text-sm text-color mb-10 f-f-l mt-2">
-              <p tabIndex="0" className="dark:text-white focus:outline-none">
+              <p tabIndex="0" className="text-black focus:outline-none">
                 © 2024 AwsmFoodz. All rights reserved
               </p>
             </div>
