@@ -7,6 +7,7 @@ import { RxCross1 } from "react-icons/rx";
 import { MdLocationOn } from "react-icons/md";
 import { useContext } from "react";
 import UserContext from "./UseContext";
+import logo from "./assets/logo.png";
 
 function Header() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -49,9 +50,11 @@ function Header() {
   };
   return (
     <nav className=" z-40 relative flex justify-between items-center ">
-      <div className="w-20 py-5 font-bold text-3xl px-10">
+      <div className="md:ml-[20vw] ml-[5vw] ">
         <Link to="/">
-          <span className="text-[#1C1572]">AwsmFoodz</span>
+          {/* <span className="text-[#1C1572]">AwsmFoodz</span> */}
+          {/* <img src={logo}></img> */}
+          <img src={logo} className="h-[6rem] w-full" alt="AwsmFoodz Logo" />
           
         </Link>
        
