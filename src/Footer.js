@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="bg-linear-pink-invert py-12 px-4">
+      <div className="bg-linear-pink-invert py-12 px-4 ">
         <div
           tabIndex="0"
           aria-label="footer"

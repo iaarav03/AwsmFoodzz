@@ -1,42 +1,36 @@
-import React from "react";
-import pizza from './pizza.png';
-import pepsi from './pepsi.png'
+    import React from "react";
+    import bgimg from "./assets/bgimg.jpeg";
+    import { useNavigate } from "react-router-dom";
+   
+    import FoodCarousel from "./FoodCar";
 
-
-const MidBody=()=>{
-
-return (
-<>
-    <div className="flex flex-col sm:hidden">
-        <div className="h-[40vh] pt-20">
-          <img src={pizza}></img>
-        </div>
-        <div className=" ">
-            <h1 className="text text-center font-bold text-4xl ">AwsmFoodz</h1>
-            <div className="text-center container mx-auto">
-                <p className="  pt-5 text-justify pl-12 w-[90vw]">Welcome to AwsmFoodz, your ultimate destination for culinary delight! We're here to tantalize your taste buds and elevate your dining experience to a whole new level. Dive into a world of flavor with our carefully curated selection of recipes, ranging from mouthwatering classics to innovative fusion dishes. Join us on this gastronomic journey and unleash your inner foodie with AwsmFoodz. Bon appétit!</p>
+    const MidBody = () => {
+        const navigate=useNavigate();
+        const handleonclick=()=>{
+            navigate('/start')
+        }
+    return (
+        <div
+        className="min-h-screen min-w-full absolute top-1 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bgimg})` }}
+        >
+        <div className="flex flex-col justify-center items-center h-screen">
+            <div className="tangerine-bold text-[#cba261] text-8xl ">
+            Welcome
             </div>
+            <div className="text-4xl text-[#1C1572] mb-4">AWSM FOODZ</div>
+            <div className="w-16 h-1 bg-white rounded-full mb-2"></div>
+            
+            <div>
+            <button type="button" onClick={handleonclick} class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-[#1C1572] focus:z-10 focus:ring-4 focus:ring-gray-100">Explore</button>
+            </div>
+            
         </div>
-    </div>
-    <div class="flex flex-row">
-    <div class="hidden md:block  w-1/2 mt-32">
-        <h1 class="text-[#1C1572] text-center font-bold text-3xl font-serif">Now we are taking orders online</h1>
-        <h1 class="text-center font-bold text-3xl font-serif">
-            <span class="text-[#1C1572]">AwsmFoodz</span>
-        </h1>
-        <div class="ml-20 text-center container mx-auto">
-            <p class="pt-5 text-justify">Welcome to AwsmFoodz, your ultimate destination for culinary delight! We're here to tantalize your taste buds and elevate your dining experience to a whole new level. Dive into a world of flavor with our carefully curated selection of recipes, ranging from mouthwatering classics to innovative fusion dishes. Join us on this gastronomic journey and unleash your inner foodie with AwsmFoodz. Bon appétit!</p>
+        
         </div>
-    </div>
-    <div class="hidden md:block  pl-52  w-1/2">
-        <img src={pepsi} class="h-[50vh]"></img>
-    </div>
-</div>
+       
+       
+    );
+    };
 
-</>
-);
-
-
-
-}
-export default MidBody;
+    export default MidBody;

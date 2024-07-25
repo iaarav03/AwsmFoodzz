@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import MidBody from "./MidBody";
 import UserContext from "./UseContext";
+import FoodCarousel from "./FoodCar";
 import { MdLocationOn } from "react-icons/md";
-
+import rest from "./assets/rest.jpg";
+import bgimg from "./assets/bgimg.jpeg"
 const Body = () => {
   const [Allrest, setAllrest] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -130,13 +132,18 @@ const Body = () => {
     <Shimmer />
     </>
   ) : (
-    <>
-      <MidBody />
-      <div className="flex justify-center items-center mt-6 md:mt-0 space-x-3  ">
+      <div
+        className=" min-w-full   bg-cover bg-center  "
+        style={{ backgroundImage: `url(${bgimg})` }}
+        >
+      <div className="">
+        
+          <FoodCarousel />
+      <div className="flex justify-center items-center mt-6 pt-6 md:mt-0 space-x-3   ">
       {/* <div>
  <button className="pl-1" onClick={getLocation}>button</button>
       </div> */}
-        <div className="relative">
+        <div className="relative ">
           <input
             type="text"
             className="search-input bg-white border rounded-l-lg px-4 py-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
@@ -179,7 +186,9 @@ const Body = () => {
           </div>
         ))}
       </div>
-    </>
+      </div>
+    
+    </div>
   );
 };
 

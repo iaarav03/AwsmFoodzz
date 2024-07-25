@@ -48,7 +48,7 @@ function Header() {
     }
   };
   return (
-    <nav className=" z-50 flex justify-between items-center ">
+    <nav className=" z-40 relative flex justify-between items-center ">
       <div className="w-20 py-5 font-bold text-3xl px-10">
         <Link to="/">
           <span className="text-[#1C1572]">AwsmFoodz</span>
@@ -60,14 +60,14 @@ function Header() {
         <ul className="hidden md:flex items-center space-x-16 px-64">
         
         <div>
- <button className="pl-1" onClick={getLocation}><MdLocationOn className="text-3xl "/></button>
+ <button className="pl-1" onClick={getLocation}><MdLocationOn className="text-3xl  "/></button>
  <p>{status}</p>
       </div>
         
           <li>
             <Link
               to="/"
-              className="hover:text-[#1C1572]  text-xl  font-semibold"
+              className="hover:text-[#1C1572]   text-xl  font-semibold"
             >
               Home
             </Link>
@@ -75,7 +75,7 @@ function Header() {
           <li>
             <Link
               to="/about"
-              className="hover:text-[#1C1572] text-xl font-semibold"
+              className="hover:text-[#1C1572] text-xl  font-semibold"
             >
               About
             </Link>
@@ -83,7 +83,7 @@ function Header() {
           <li>
             <Link
               to="/cart"
-              className=" text-xl font-semibold "
+              className=" text-xl font-semibold  "
             >
               {" "}
               <FaShoppingCart className=""/>-{cartitem.length}

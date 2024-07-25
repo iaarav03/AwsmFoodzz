@@ -12,6 +12,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Restmenuu from "./RestmenuCard";
 import MidBody from "./MidBody";
+import { Mid } from "./Mid";
+import FoodCarousel from "./FoodCar";
 import UserContext from "./UseContext";
 import { useState } from "react";
 const AppLayout=()=>{
@@ -52,7 +54,7 @@ const appRouter = createBrowserRouter([
         // show children component for routing
         {
           path: "/",
-          element: <Body />,
+          element: <MidBody />,
         },
         {
           path: "/about",
@@ -67,8 +69,16 @@ const appRouter = createBrowserRouter([
           element: <Restmenuu />,
         },
         {
-          path:"/mid",
-          element:<MidBody/>
+          path:"/start",
+          element:<Body/>
+        },
+        {
+          path:"/md",
+          element:<Mid/>
+        },
+        {
+          path:"/foodc",
+          element:<FoodCarousel/>
         }
       ],
     },
