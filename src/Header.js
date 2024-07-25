@@ -49,12 +49,12 @@ function Header() {
     }
   };
   return (
-    <nav className=" z-40 relative flex justify-between items-center ">
-      <div className="md:ml-[20vw] ml-[5vw] ">
+    <nav className=" z-40 relative flex justify-between items-center max-w-[100vw] ">
+      <div className="lg:ml-[15vw] ml-[5vw] ">
         <Link to="/">
           {/* <span className="text-[#1C1572]">AwsmFoodz</span> */}
           {/* <img src={logo}></img> */}
-          <img src={logo} className="h-[6rem] w-full" alt="AwsmFoodz Logo" />
+          <img src={logo} className="h-[6rem] min-w-40" alt="AwsmFoodz Logo" />
           
         </Link>
        
