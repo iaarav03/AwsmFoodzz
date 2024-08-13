@@ -1,19 +1,35 @@
 import React from "react";
 
 const ShimmerCard = () => {
-  const shimmerArray = Array.from({ length: 10 });
-
-  return (
-    <div className="flex flex-wrap justify-center mt-10 -mx-2  ">
-      {shimmerArray.map((_, index) => (
-        <div className="lg:w-1/4 w-full md:w-1/3 px-2 mb-4  " key={index}>
-          <div className="bg-gray-300 h-64 animate-pulse rounded-lg"></div>
-          <div className="bg-gray-200 h-4 mt-2 animate-pulse w-2/3"></div>
-          <div className="bg-gray-200 h-4 mt-2 animate-pulse w-1/3"></div>
+ const shimArr = Array(8).fill("");
+    return (
+    <div className='xl:max-w-[80%] lg:max-w-[80%] md:max-w-[90%] sm:max-w-[90%] mx-auto min-h-screen pt-24'>
+        <div className='mt-8 mb-4 ml-4 pl-2 max-w-[40%] bg-[#eef0f5] h-6' />
+        <div className='flex p-4 overflow-hidden'>
+        {shimArr.map((e, i) => {
+            return <div className='h-64 min-w-[424px] bg-[#eef0f5] mr-8 rounded-3xl' key={i} />
+        })}
         </div>
-      ))}
+        <div className='mt-8 mb-4 ml-4 pl-2 max-w-[40%] bg-[#eef0f5] h-6' />
+        <div className='flex p-4 overflow-hidden'>
+        {shimArr.map((e, i) => {
+            return <div className='h-[180px] min-w-[144px] bg-[#eef0f5] mr-8' key={i} />
+        })}
+        </div>
+        <div className='mt-8 ml-4 pl-2 max-w-[40%] bg-[#eef0f5] h-6' />
+        <div className='flex mt-8 ml-4 pl-2 overflow-hidden min-h-[240px]'>
+        {shimArr.map((e, i) => {
+            return <div className='h-[160px] min-w-[256px] rounded-3xl bg-[#eef0f5] mr-8' key={i} />
+        })}
+        </div>
+        <div className='mt-8 ml-4 pl-2 max-w-[40%] bg-[#eef0f5] h-6' />
+        <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-8 ml-4 gap-y-8 overflow-hidden min-h-[240px]'>
+        {shimArr.map((e, i) => {
+            return <div className='h-[160px] min-w-[256px] max-w-[256px] rounded-3xl bg-[#eef0f5] mr-8' key={i} />
+        })}
+        </div>
     </div>
-  );
+  )
 };
 
 export default ShimmerCard;

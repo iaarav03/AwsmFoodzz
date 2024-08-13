@@ -1,23 +1,41 @@
-import React from "react";
+import React from 'react'
 
-const Shimmer1 = () => (
-  <div className="bg-gradient-to-r from-green-200 via-blue-100 to-purple-200 p-4 shadow-lg rounded-lg flex flex-col animate-pulse">
-    <div className="h-48 overflow-hidden rounded-t-lg">
-      <div className="w-full h-full bg-gray-300"></div>
-    </div>
-
-    <div className="flex flex-col mt-3">
-      <div className="h-6 bg-gray-300 mb-2"></div>
-      <div className="h-4 bg-gray-300 w-2/3"></div>
-      <div className="h-3 bg-gray-300 w-1/3"></div>
-      <div className="flex items-center mt-2">
-        <div className="h-4 w-4 bg-gray-300"></div>
-        <div className="h-4 w-16 bg-gray-300 ml-1"></div>
-        <div className="h-4 w-4 bg-gray-300 mx-1"></div>
-        <div className="h-4 w-16 bg-gray-300"></div>
+const RestaurantMenuShimmer = () => {
+  const shimArr = Array(8).fill("");
+  return (
+    <div className='mx-auto mt-32 max-w-[75%]'>
+      <div className='max-w-[35%] bg-[#eef0f5] h-3 mb-12 rounded' />
+      <div className='flex justify-between items-center my-5 rounded h-fit'>
+        <div className='flex-1'>
+          <div className='mb-4 w-[30%] bg-[#eef0f5] h-6 rounded-sm' />
+          <div className='mb-4 w-[15%] bg-[#eef0f5] h-3 rounded-sm' />
+          <div className='mb-4 w-[10%] bg-[#eef0f5] h-3 rounded-sm' />
+        </div>
+        <div className='pb-4 bg-[#eef0f5] h-[76px] w-[70px] rounded-xl'></div>
       </div>
+      <div className='mb-4 max-w-[30%] bg-[#eef0f5] h-5 rounded-sm' />
+      <div className='mb-4 max-w-[30%] bg-[#eef0f5] h-7 rounded-sm' />
+      <div className='flex mt-8 overflow-hidden'>
+        {shimArr.map((e, i) => {
+            return <div className='h-16 min-w-[200px] rounded-xl bg-[#eef0f5] mr-4' key={i} />
+        })}
+        </div>
+        <div className='mt-8 max-w-[30%] bg-[#eef0f5] h-7 rounded-sm' />
+        <div className='mt-8 overflow-hidden'>
+        {shimArr.map((e, i) => {
+            return <div className='flex' key={i}>
+              <div className='flex-1 mb-6'>
+              <div className='mb-4 w-3 bg-[#eef0f5] h-3 rounded-sm' />
+          <div className='mb-4 w-[30%] bg-[#eef0f5] h-4 rounded-sm' />
+          <div className='mb-4 w-[5%] bg-[#eef0f5] h-3 rounded-sm' />
+          <div className='mb-4 w-[50%] bg-[#eef0f5] h-3 rounded-sm' />
+        </div>
+        <div className='pb-4 max-w-[10%] bg-[#eef0f5] h-24 min-w-[120px] rounded-xl'></div>
+            </div>
+        })}
+        </div>
     </div>
-  </div>
-);
+  )
+}
 
-export default Shimmer1;
+export default RestaurantMenuShimmer;

@@ -11,7 +11,7 @@
         }
     return (
         <div
-        className="min-h-screen min-w-full absolute top-1 bg-cover bg-center"
+        className="min-h-screen min-w-full  top-1 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgimg})` }}
         >
         <div className="flex flex-col justify-center items-center h-screen">

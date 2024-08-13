@@ -3,8 +3,9 @@ import { createContext } from "react";
 
 const UserContext = createContext({
   user: {
-    lat:26.9124336,
-    lng:75.7872709
+    lat:25.2138,
+    lng:75.8648,
+    loc:"jaipur"
   },
 });
 export default UserContext;

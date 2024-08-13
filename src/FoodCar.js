@@ -31,7 +31,7 @@ const FoodCarousel = () => {
             key={index}
             src={image}
             alt={`Dish ${index + 1}`}
-            className="w-40 h-40 object-cover"
+            className="md:w-40 md:h-40 w-28 h-28 object-cover"
           />
         ))}
         {images.map((image, index) => (
@@ -39,7 +39,7 @@ const FoodCarousel = () => {
             key={index + images.length}
             src={image}
             alt={`Dish ${index + 1}`}
-            className="w-40 h-40 object-cover"
+            className="md:w-40 md:h-40 w-28 h-28 object-cover"
           />
         ))}
       </div>

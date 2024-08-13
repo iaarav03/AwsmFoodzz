@@ -16,11 +16,15 @@ import { Mid } from "./Mid";
 import FoodCarousel from "./FoodCar";
 import UserContext from "./UseContext";
 import { useState } from "react";
+import Help from "./Help";
+import NewCart from "./NewCart";
+import YourComponent from "./Getlocation";
 const AppLayout=()=>{
  const [user,setUser]=useState({
   user:{
     lat:26.9124336,
-    lng:75.7872709
+    lng:75.7872709,
+    loc:"jaipur"
   }
  })
 
@@ -63,6 +67,18 @@ const appRouter = createBrowserRouter([
         {
           path: "/cart",
           element: <Cart />,
+        },
+        {
+          path:"/newcart",
+          element: <NewCart/>
+        },
+        {
+          path:"/loc",
+          element: <YourComponent/>
+        },
+        {
+          path:"/help",
+          element: <Help />,
         },
         {
           path: "/restaurant/:resId",
