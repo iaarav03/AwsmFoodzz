@@ -156,10 +156,10 @@ const Body = () => {
 </div>
 
 
-            <div className="flex flex-wrap justify-center items-center mt-10">
+            <div className="flex flex-wrap justify-center items-center mt-10 ">
               {Filterrest.map((restaurant) => (
                 <div
-                  className="lg:w-[20vw]  px-2 mb-4"
+                  className=" xl:w-[20vw]  px-2 mb-4"
                   key={restaurant?.info?.id}
                 >
                   <Link to={"/restaurant/" + restaurant?.info?.id}>
